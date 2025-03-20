@@ -1,0 +1,6 @@
+select>option{
+  font-family: "Open Sans", serif;
+}
+option::selection{
+  font-family: "Open Sans", serif;
+}
