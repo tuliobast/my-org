@@ -3,6 +3,7 @@ import { TextField } from '../TextField/TextField'
 import { OptionList} from '../OptionList/OptionList'
 import { Button } from '../Button/Button'
 import './Form.css'
+import { TiSocialTwitterCircular } from 'react-icons/ti'
 
 
 export const Form= ({teams, register}) => {
@@ -12,8 +13,10 @@ export const Form= ({teams, register}) => {
   const [urlPhoto, setUrlPhoto] = useState('')
   const [team, setTeam] = useState('')
 
-  // const {registerCollaborator} = props
+  const [title, setTitle] = useState('')
+  const [color, setColor] = useState('')
 
+  // const {registerCollaborator} = props
 
   const handleSubmit = (e) => {
     e.preventDefault()
@@ -31,8 +34,8 @@ export const Form= ({teams, register}) => {
 
   return (
     <section className='form container-fluid'>
-      <form onSubmit={handleSubmit} className='container-fluid shadow p-6 mb-5 bg-body-tertiary rounded'>
-        <h2 className='text-center display-5 my-5'>Fill out the form to create the collaborator</h2>
+      <form onSubmit={handleSubmit} className='container-fluid shadow p-6 mx-1 bg-body-tertiary rounded'>
+        <h2 className='text-center display-6 my-5'>Fill out the form to create the collaborator</h2>
         <TextField 
           title={"Name"} 
           placeholder={"Enter the name..."} 
@@ -64,6 +67,26 @@ export const Form= ({teams, register}) => {
         />
         <Button text={"Create"}/>
 
+      </form>
+      <form onSubmit={handleSubmit} className='container-fluid shadow p-6 mx-5 bg-body-tertiary rounded'>
+        <h2 className='text-center display-6 my-5'>Fill out the form to create the Team</h2>
+        <TextField 
+          title={"Title"} 
+          placeholder={"Enter the team name..."} 
+          type= {"text"} 
+          isRequired 
+          value ={title}
+          updateValue={setTitle}
+        />
+        <TextField 
+          title={"Color"} 
+          placeholder={"Enter the color team (hex)..."} 
+          type={"text"} 
+          isRequired
+          value={setColor}
+          updateValue={setColor}  
+        />
+        <Button text="Register Team"/>
       </form>
     </section>
   )

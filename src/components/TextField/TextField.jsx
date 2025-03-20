@@ -10,7 +10,7 @@ const handleChangeText = ({target}) => {
 
   return (  
     <>
-      <label className="container-fluid form-label fw-medium fs-2 mt-2 ms-2 ">{title}</label>
+      <label className="container-fluid form-label fw-medium fs-4 mt-2 ms-2 ">{title}</label>
       <input 
         className="form-control shadow p-3 mb-2 bg-body-tertiary rounded" 
         placeholder={placeholder} 

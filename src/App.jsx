@@ -9,7 +9,7 @@ import { Footer } from './components/Footer/Footer'
 import './App.css'  
 
 export const App = () => {
-  const [showForm, setshowForm] = useState(false)
+  const [showForm, setshowForm] = useState(true )
   const [collaborators, setCollaborators] = useState([
     {
       id: v4(),
@@ -97,7 +97,7 @@ export const App = () => {
   }
 
   const deleteCollaborator= (id) => {
-    // console.log('eliminado', id)
+    // console.log('eliminado', id) 
     const updatedCollaborators = collaborators.filter(collaborator => collaborator.id !== id)
     setCollaborators(updatedCollaborators)
   }
