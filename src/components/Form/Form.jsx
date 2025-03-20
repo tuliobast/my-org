@@ -83,7 +83,7 @@ export const Form= ({teams, register}) => {
           placeholder={"Enter the color team (hex)..."} 
           type={"text"} 
           isRequired
-          value={setColor}
+          value={color}
           updateValue={setColor}  
         />
         <Button text="Register Team"/>
